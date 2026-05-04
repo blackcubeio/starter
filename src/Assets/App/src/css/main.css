@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* Scan des sources pour les classes Tailwind */
+@source "../../../../Views/**/*.php";
+@source "../../../../../vendor/blackcube/yii-bleet/src/**/*.php";
