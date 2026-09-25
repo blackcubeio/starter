@@ -1,0 +1,25 @@
+{
+    "elementType": "content",
+    "path": "1",
+    "elasticSchemaId": null,
+    "data": [],
+    "id": 1,
+    "name": "Dispatch",
+    "languageId": "fr",
+    "typeId": 5,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": null,
+        "sitemap": null
+    },
+    "blocs": [],
+    "tags": [],
+    "authors": []
+}

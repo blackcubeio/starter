@@ -1,0 +1,39 @@
+/**
+ * configure.ts
+ *
+ * @copyright 2010-2026 Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */
+
+/**
+ * drawer-trigger.ts
+ *
+ * @copyright 2010-2026 Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */
+
+/**
+ * event-aggregator.ts
+ *
+ * @copyright 2010-2026 Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */
+
+/**
+ * index.ts
+ *
+ * @copyright 2010-2026 Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */
+
+/**
+ * toc.ts
+ *
+ * @copyright 2010-2026 Philippe Gaultier
+ * @license https://www.blackcube.io/license
+ * @link https://www.blackcube.io
+ */

@@ -1,0 +1,315 @@
+@import "tailwindcss";
+@import "../../../TarteAuCitron/css/tarteaucitron.css";
+
+/* Scan des sources pour les classes Tailwind */
+@source "../../../../Views/**/*.php";
+@source "../../../../Widgets/**/*.php";
+@source "../../../../../vendor/blackcube/yii-bleet/src/**/*.php";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --height-nav: calc(100vh - 4rem);
+
+    /* primary — charcoal (zinc), sœur sombre du navy Blackcube */
+    --color-primary-50:  #fafafa;
+    --color-primary-100: #f4f4f5;
+    --color-primary-200: #e4e4e7;
+    --color-primary-300: #d4d4d8;
+    --color-primary-400: #a1a1aa;
+    --color-primary-500: #71717a;
+    --color-primary-600: #52525b;
+    --color-primary-700: #3f3f46;
+    --color-primary-800: #27272a;
+    --color-primary-900: #18181b;
+
+    /* secondary — dboard slate */
+    --color-secondary-50:  #f8fafc;
+    --color-secondary-100: #f1f5f9;
+    --color-secondary-200: #e2e8f0;
+    --color-secondary-300: #cbd5e1;
+    --color-secondary-400: #94a3b8;
+    --color-secondary-500: #64748b;
+    --color-secondary-600: #475569;
+    --color-secondary-700: #334155;
+    --color-secondary-800: #1e293b;
+    --color-secondary-900: #0f172a;
+
+    /* accent — dboard yellow */
+    --color-accent-50:  #fefffe;
+    --color-accent-100: #feffc7;
+    --color-accent-200: #ffff99;
+    --color-accent-300: #ffff5c;
+    --color-accent-400: #ffff00;
+    --color-accent-500: #e6e600;
+    --color-accent-600: #b3b300;
+    --color-accent-700: #808000;
+    --color-accent-800: #4d4d00;
+    --color-accent-900: #333300;
+
+    /* danger */
+    --color-danger-50:  #fef2f2;
+    --color-danger-100: #fee2e2;
+    --color-danger-200: #fecaca;
+    --color-danger-300: #fca5a5;
+    --color-danger-400: #f87171;
+    --color-danger-500: #ef4444;
+    --color-danger-600: #dc2626;
+    --color-danger-700: #b91c1c;
+    --color-danger-800: #991b1b;
+    --color-danger-900: #7f1d1d;
+
+    /* warning */
+    --color-warning-50:  #fff7ed;
+    --color-warning-100: #ffedd5;
+    --color-warning-200: #fed7aa;
+    --color-warning-300: #fdba74;
+    --color-warning-400: #fb923c;
+    --color-warning-500: #f97316;
+    --color-warning-600: #ea580c;
+    --color-warning-700: #c2410c;
+    --color-warning-800: #9a3412;
+    --color-warning-900: #7c2d12;
+
+    /* success */
+    --color-success-50:  #f0fdf4;
+    --color-success-100: #dcfce7;
+    --color-success-200: #bbf7d0;
+    --color-success-300: #86efac;
+    --color-success-400: #4ade80;
+    --color-success-500: #22c55e;
+    --color-success-600: #16a34a;
+    --color-success-700: #15803d;
+    --color-success-800: #166534;
+    --color-success-900: #14532d;
+
+    /* info */
+    --color-info-50:  #eff6ff;
+    --color-info-100: #dbeafe;
+    --color-info-200: #bfdbfe;
+    --color-info-300: #93c5fd;
+    --color-info-400: #60a5fa;
+    --color-info-500: #3b82f6;
+    --color-info-600: #2563eb;
+    --color-info-700: #1d4ed8;
+    --color-info-800: #1e40af;
+    --color-info-900: #1e3a8a;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    ::selection {
+        background: var(--color-primary-500);
+        color: var(--color-secondary-50);
+    }
+    img, svg {
+        display: block;
+    }
+    body.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {
+    background: transparent;
+    color: var(--color-accent-700);
+}
+html:not(.dark) h1.text-white mark, html:not(.dark) h2.text-white mark, html:not(.dark) h3.text-white mark, html:not(.dark) h4.text-white mark, html:not(.dark) h5.text-white mark, html:not(.dark) h6.text-white mark,
+html.dark h1.dark\:text-white mark, html.dark h2.dark\:text-white mark, html.dark h3.dark\:text-white mark, html.dark h4.dark\:text-white mark, html.dark h5.dark\:text-white mark, html.dark h6.dark\:text-white mark {
+    color: var(--color-accent-400);
+}
+
+dialog.drawer {
+    background: transparent;
+    color: inherit;
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+dialog.drawer::backdrop {
+    background: transparent;
+}
+.drawer .drawer-backdrop {
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.drawer.open .drawer-backdrop {
+    opacity: 1;
+}
+.drawer .drawer-panel {
+    transform: translateX(-100%);
+    transition: transform .4s cubic-bezier(.7, 0, .2, 1);
+}
+.drawer.open .drawer-panel {
+    transform: translateX(0);
+}
+
+/* Prism syntax highlighting — Blackcube custom theme */
+pre[class*="language-"],
+code[class*="language-"] {
+    background: transparent;
+    color: var(--color-secondary-200);
+}
+html.dark pre[class*="language-"],
+html.dark code[class*="language-"] {
+    color: var(--color-secondary-800);
+}
+.token {
+    color: var(--color-secondary-200);
+}
+html.dark .token {
+    color: var(--color-secondary-800);
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: var(--color-secondary-500);
+    font-style: italic;
+}
+.token.punctuation,
+.token.operator {
+    color: var(--color-secondary-300);
+}
+html.dark .token.punctuation,
+html.dark .token.operator {
+    color: var(--color-secondary-600);
+}
+.token.namespace {
+    opacity: .7;
+}
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: var(--color-warning-200);
+}
+html.dark .token.boolean,
+html.dark .token.number,
+html.dark .token.constant,
+html.dark .token.symbol {
+    color: var(--color-warning-700);
+}
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex {
+    color: var(--color-success-300);
+}
+html.dark .token.string,
+html.dark .token.char,
+html.dark .token.attr-value,
+html.dark .token.regex {
+    color: var(--color-success-700);
+}
+.token.keyword,
+.token.atrule,
+.token.builtin,
+.token.important {
+    color: var(--color-accent-300);
+}
+html.dark .token.keyword,
+html.dark .token.atrule,
+html.dark .token.builtin,
+html.dark .token.important {
+    color: var(--color-accent-700);
+}
+.token.function,
+.token.class-name {
+    color: var(--color-warning-300);
+}
+html.dark .token.function,
+html.dark .token.class-name {
+    color: var(--color-warning-700);
+}
+.token.tag,
+.token.selector,
+.token.attr-name,
+.token.property {
+    color: var(--color-info-300);
+}
+html.dark .token.tag,
+html.dark .token.selector,
+html.dark .token.attr-name,
+html.dark .token.property {
+    color: var(--color-info-700);
+}
+.token.url,
+.token.entity,
+.token.variable {
+    color: var(--color-info-200);
+}
+html.dark .token.url,
+html.dark .token.entity,
+html.dark .token.variable {
+    color: var(--color-info-800);
+}
+.token.deleted {
+    color: var(--color-danger-400);
+}
+html.dark .token.deleted {
+    color: var(--color-danger-600);
+}
+.token.inserted {
+    color: var(--color-success-400);
+}
+html.dark .token.inserted {
+    color: var(--color-success-600);
+}
+
+.rich a {
+    color: var(--color-primary-700);
+    text-decoration: underline;
+    text-underline-offset: .2em;
+    text-decoration-thickness: 1px;
+}
+html.dark .rich a {
+    color: var(--color-primary-300);
+}
+.rich strong {
+    font-weight: 600;
+}
+.rich em {
+    font-style: italic;
+}
+.rich u {
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+.rich s {
+    text-decoration: line-through;
+}
+.rich ul, .rich ol {
+    padding-left: 1.5em;
+}
+.rich ul {
+    list-style: disc outside;
+}
+.rich ol {
+    list-style: decimal outside;
+}
+.rich ul li::marker, .rich ol li::marker {
+    color: var(--color-primary-600);
+}
+html.dark .rich ul li::marker, html.dark .rich ol li::marker {
+    color: var(--color-primary-300);
+}

@@ -1,0 +1,127 @@
+{
+    "elementType": "content",
+    "path": "1.1.1.6",
+    "elasticSchemaId": 4,
+    "data": {
+        "overline": "À PROPOS",
+        "title": "Une question ?",
+        "description": "<p>Les réponses aux questions qui reviennent le plus souvent à propos de Blackcube.</p>",
+        "image": {
+            "name": "demo.jpg",
+            "data": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1600&q=80&fit=max&auto=format"
+        },
+        "alt": "Une question ?",
+        "label": null,
+        "route": null,
+        "url": null,
+        "secondaryLabel": null,
+        "secondaryRoute": null,
+        "secondaryUrl": null
+    },
+    "id": 43,
+    "name": "FAQ",
+    "languageId": "fr",
+    "typeId": 1,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "questions-frequentes",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": {
+            "canonical": false,
+            "title": null,
+            "image": null,
+            "description": null,
+            "noindex": false,
+            "nofollow": false,
+            "og": false,
+            "ogType": null,
+            "twitter": false,
+            "twitterCard": null,
+            "jsonldType": "WebPage",
+            "speakable": false,
+            "keywords": null,
+            "accessibleForFree": true,
+            "active": false,
+            "blocs": []
+        },
+        "sitemap": {
+            "frequency": "daily",
+            "priority": 0.5,
+            "active": true
+        }
+    },
+    "blocs": [
+        {
+            "elasticSchemaId": 5,
+            "active": true,
+            "data": {
+                "level": "2",
+                "title": "Questions fréquentes",
+                "description": null
+            }
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Blackcube est-il un CMS headless ?",
+                "description": "<p>Oui. Blackcube fournit la gestion des données, le système de rendu et une API GraphQL. Vous gardez la main sur les templates et le front. Le back-office s'occupe de l'édition, le site public reste sous votre contrôle.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Faut-il être développeur pour utiliser Blackcube ?",
+                "description": "<p>Pour créer un site avec Blackcube, oui — il faut savoir coder en PHP. Pour alimenter un site Blackcube existant via le back-office, non — l'interface est conçue pour des contributeurs sans bagage technique.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Quelle est la différence avec les autres CMS ?",
+                "description": "<p>Blackcube fournit le contenu structuré et le système de routage, vous codez le reste. Si vous voulez intégrer un CMS dans une application sans plier votre code, Blackcube vous y aidera.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Quelle est la différence avec un CMS SaaS ?",
+                "description": "<p>Les CMS SaaS hébergent vos données chez eux. Blackcube tourne sur votre serveur, vos données restent chez vous. Pas de quota d'appels API, pas d'abonnement mensuel, pas de risque qu'un service tiers ferme demain.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Blackcube est-il maintenu ?",
+                "description": "<p>Oui. Le projet est maintenu activement par Blackcube. Les packages sont sur Packagist et GitHub.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Quelle licence ?",
+                "description": "<p>BSD-3-Clause. Vous pouvez intégrer Blackcube dans un projet propriétaire, le modifier, le redistribuer. Pas de clause virale, pas d'obligation de publier votre code métier.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 11,
+            "data": {
+                "title": "Quel framework PHP est supporté ?",
+                "description": "<p>Celui que vous voulez : soit votre framework est compatible PSR et c'est natif, soit il ne l'est pas et il vous suffira de créer le pont qui vous convient. Bien évidemment, nous sommes preneurs de toute MR.</p>"
+            },
+            "active": true
+        }
+    ],
+    "tags": [],
+    "authors": []
+}

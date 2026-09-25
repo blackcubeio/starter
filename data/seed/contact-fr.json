@@ -1,0 +1,129 @@
+{
+    "elementType": "content",
+    "path": "1.1.3",
+    "elasticSchemaId": 4,
+    "data": {
+        "overline": null,
+        "title": "Contact",
+        "description": "<p><span class=\"ql-cursor\">﻿</span>Une question sur Blackcube CMS ? N'hésitez pas à nous contacter, nous sommes là pour vous aider.</p>",
+        "image": {
+            "name": "contact.jpg",
+            "data": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80&fit=max&auto=format"
+        },
+        "alt": "Contact",
+        "label": null,
+        "route": null,
+        "url": null,
+        "secondaryLabel": null,
+        "secondaryRoute": null,
+        "secondaryUrl": null
+    },
+    "id": 12,
+    "name": "Contact",
+    "languageId": "fr",
+    "typeId": 2,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "contactez-nous",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": {
+            "canonical": true,
+            "title": null,
+            "image": null,
+            "description": null,
+            "noindex": true,
+            "nofollow": true,
+            "og": false,
+            "ogType": "website",
+            "twitter": false,
+            "twitterCard": "summary",
+            "jsonldType": "WebPage",
+            "speakable": false,
+            "keywords": null,
+            "accessibleForFree": true,
+            "active": true,
+            "blocs": []
+        },
+        "sitemap": {
+            "frequency": "daily",
+            "priority": 0.5,
+            "active": true
+        }
+    },
+    "blocs": [
+        {
+            "elasticSchemaId": 13,
+            "data": {
+                "route": null,
+                "description": "",
+                "successTitle": "Message envoyé",
+                "successDescription": "<p>Nous traitons votre demande dans les meilleurs délais.</p>"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "envelope.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1zbG90PSJpY29uIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yMS43NSA2Ljc1djEwLjVhMi4yNSAyLjI1IDAgMCAxLTIuMjUgMi4yNWgtMTVhMi4yNSAyLjI1IDAgMCAxLTIuMjUtMi4yNVY2Ljc1bTE5LjUgMEEyLjI1IDIuMjUgMCAwIDAgMTkuNSA0LjVoLTE1YTIuMjUgMi4yNSAwIDAgMC0yLjI1IDIuMjVtMTkuNSAwdi4yNDNhMi4yNSAyLjI1IDAgMCAxLTEuMDcgMS45MTZsLTcuNSA0LjYxNWEyLjI1IDIuMjUgMCAwIDEtMi4zNiAwTDMuMzIgOC45MWEyLjI1IDIuMjUgMCAwIDEtMS4wNy0xLjkxNlY2Ljc1Ii8+Cjwvc3ZnPgo="
+                },
+                "alt": "Support",
+                "title": "Support",
+                "description": "<p>Pour toute question technique, consultez d'abord notre documentation complète.</p>",
+                "route": "dcore-c-6",
+                "url": null
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "github.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyBmaWxsPSJjdXJyZW50Q29sb3IiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgICA8cGF0aCBkPSJNMTIgMGMtNi42MjYgMC0xMiA1LjM3My0xMiAxMiAwIDUuMzAyIDMuNDM4IDkuOCA4LjIwNyAxMS4zODcuNTk5LjExMS43OTMtLjI2MS43OTMtLjU3N3YtMi4yMzRjLTMuMzM4LjcyNi00LjAzMy0xLjQxNi00LjAzMy0xLjQxNi0uNTQ2LTEuMzg3LTEuMzMzLTEuNzU2LTEuMzMzLTEuNzU2LTEuMDg5LS43NDUuMDgzLS43MjkuMDgzLS43MjkgMS4yMDUuMDg0IDEuODM5IDEuMjM3IDEuODM5IDEuMjM3IDEuMDcgMS44MzQgMi44MDcgMS4zMDQgMy40OTIuOTk3LjEwNy0uNzc1LjQxOC0xLjMwNS43NjItMS42MDQtMi42NjUtLjMwNS01LjQ2Ny0xLjMzNC01LjQ2Ny01LjkzMSAwLTEuMzExLjQ2OS0yLjM4MSAxLjIzNi0zLjIyMS0uMTI0LS4zMDMtLjUzNS0xLjUyNC4xMTctMy4xNzYgMCAwIDEuMDA4LS4zMjIgMy4zMDEgMS4yMy45NTctLjI2NiAxLjk4My0uMzk5IDMuMDAzLS40MDQgMS4wMi4wMDUgMi4wNDcuMTM4IDMuMDA2LjQwNCAyLjI5MS0xLjU1MiAzLjI5Ny0xLjIzIDMuMjk3LTEuMjMuNjUzIDEuNjUzLjI0MiAyLjg3NC4xMTggMy4xNzYuNzcuODQgMS4yMzUgMS45MTEgMS4yMzUgMy4yMjEgMCA0LjYwOS0yLjgwNyA1LjYyNC01LjQ3OSA1LjkyMS40My4zNzIuODIzIDEuMTAyLjgyMyAyLjIyMnYzLjI5M2MwIC4zMTkuMTkyLjY5NC44MDEuNTc2IDQuNzY1LTEuNTg5IDguMTk5LTYuMDg2IDguMTk5LTExLjM4NiAwLTYuNjI3LTUuMzczLTEyLTEyLTEyeiI+PC9wYXRoPgo8L3N2Zz4="
+                },
+                "alt": "GitHub",
+                "title": "GitHub",
+                "description": "<p>Retrouvez le code source, signalez un bug ou contribuez au projet sur GitHub.</p>",
+                "route": null,
+                "url": "https://github.com/blackcubeio"
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "book-open.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1zbG90PSJpY29uIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xMiA2LjA0MkE4Ljk2NyA4Ljk2NyAwIDAgMCA2IDMuNzVjLTEuMDUyIDAtMi4wNjIuMTgtMyAuNTEydjE0LjI1QTguOTg3IDguOTg3IDAgMCAxIDYgMThjMi4zMDUgMCA0LjQwOC44NjcgNiAyLjI5Mm0wLTE0LjI1YTguOTY2IDguOTY2IDAgMCAxIDYtMi4yOTJjMS4wNTIgMCAyLjA2Mi4xOCAzIC41MTJ2MTQuMjVBOC45ODcgOC45ODcgMCAwIDAgMTggMThhOC45NjcgOC45NjcgMCAwIDAtNiAyLjI5Mm0wLTE0LjI1djE0LjI1Ii8+Cjwvc3ZnPgo="
+                },
+                "alt": "Documentation",
+                "title": "Documentation",
+                "description": "<p>Guides, tutoriels pour maîtriser Blackcube CMS.</p>",
+                "route": "dcore-c-6",
+                "url": null
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 8,
+            "data": {
+                "level": "info",
+                "title": "Temps de réponse",
+                "description": "<p>Nous nous efforçons de répondre le plus rapidement possible.</p>"
+            },
+            "active": true
+        }
+    ],
+    "tags": [],
+    "authors": []
+}

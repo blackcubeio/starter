@@ -1,0 +1,110 @@
+{
+    "elementType": "content",
+    "path": "1.1",
+    "elasticSchemaId": 4,
+    "data": {
+        "overline": "À PROPOS",
+        "title": "À propos de ce starter",
+        "description": "<p>Une démo Blackcube prête à l'emploi : contenu structuré, le point de départ de votre site.</p>",
+        "image": {
+            "name": "about.jpg",
+            "data": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=80&fit=max&auto=format"
+        },
+        "alt": "À propos de ce starter",
+        "label": null,
+        "route": null,
+        "url": null,
+        "secondaryLabel": null,
+        "secondaryRoute": null,
+        "secondaryUrl": null
+    },
+    "id": 4,
+    "name": "A propos",
+    "languageId": "fr",
+    "typeId": 1,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "a-propos",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": {
+            "canonical": false,
+            "title": null,
+            "image": null,
+            "description": null,
+            "noindex": false,
+            "nofollow": false,
+            "og": false,
+            "ogType": null,
+            "twitter": false,
+            "twitterCard": null,
+            "jsonldType": "WebPage",
+            "speakable": false,
+            "keywords": null,
+            "accessibleForFree": true,
+            "active": false,
+            "blocs": []
+        },
+        "sitemap": {
+            "frequency": "daily",
+            "priority": 0.5,
+            "active": true
+        }
+    },
+    "blocs": [
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "code-bracket.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1zbG90PSJpY29uIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xNy4yNSA2Ljc1IDIyLjUgMTJsLTUuMjUgNS4yNW0tMTAuNSAwTDEuNSAxMmw1LjI1LTUuMjVtNy41LTMtNC41IDE2LjUiLz4KPC9zdmc+Cg=="
+                },
+                "alt": "Contenu structuré",
+                "title": "Contenu structuré",
+                "description": "<p>Un arbre éditorial et des URLs sur mesure : organisez votre navigation et vos URLs comme vous l'entendez.</p>",
+                "route": null,
+                "url": null
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "rectangle-group.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1zbG90PSJpY29uIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0yLjI1IDcuMTI1QzIuMjUgNi41MDQgMi43NTQgNiAzLjM3NSA2aDZjLjYyMSAwIDEuMTI1LjUwNCAxLjEyNSAxLjEyNXYzLjc1YzAgLjYyMS0uNTA0IDEuMTI1LTEuMTI1IDEuMTI1aC02YTEuMTI1IDEuMTI1IDAgMCAxLTEuMTI1LTEuMTI1di0zLjc1Wk0xNC4yNSA4LjYyNWMwLS42MjEuNTA0LTEuMTI1IDEuMTI1LTEuMTI1aDUuMjVjLjYyMSAwIDEuMTI1LjUwNCAxLjEyNSAxLjEyNXY4LjI1YzAgLjYyMS0uNTA0IDEuMTI1LTEuMTI1IDEuMTI1aC01LjI1YTEuMTI1IDEuMTI1IDAgMCAxLTEuMTI1LTEuMTI1di04LjI1Wk0zLjc1IDE2LjEyNWMwLS42MjEuNTA0LTEuMTI1IDEuMTI1LTEuMTI1aDUuMjVjLjYyMSAwIDEuMTI1LjUwNCAxLjEyNSAxLjEyNXYyLjI1YzAgLjYyMS0uNTA0IDEuMTI1LTEuMTI1IDEuMTI1aC01LjI1YTEuMTI1IDEuMTI1IDAgMCAxLTEuMTI1LTEuMTI1di0yLjI1WiIvPgo8L3N2Zz4K"
+                },
+                "alt": "Votre rendu",
+                "title": "Votre rendu",
+                "description": "<p>Le code est le vôtre, landing ou page avec navigation ou même contact. Aucune contrainte, créez ce qu'il vous faut.</p>",
+                "route": null,
+                "url": null
+            },
+            "active": true
+        },
+        {
+            "elasticSchemaId": 14,
+            "data": {
+                "group": "1",
+                "icon": {
+                    "name": "bolt.svg",
+                    "data": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1zbG90PSJpY29uIj4KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Im0zLjc1IDEzLjUgMTAuNS0xMS4yNUwxMiAxMC41aDguMjVMOS43NSAyMS43NSAxMiAxMy41SDMuNzVaIi8+Cjwvc3ZnPgo="
+                },
+                "alt": "Multilingue",
+                "title": "Multilingue",
+                "description": "<p>Plusieurs langues, des traductions liées par contenu, tout est sur mesure.</p>",
+                "route": null,
+                "url": null
+            },
+            "active": true
+        }
+    ],
+    "tags": [],
+    "authors": []
+}
