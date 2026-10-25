@@ -16,6 +16,7 @@ use App\Forms\ContactForm;
 use App\Helpers\ElasticToWidget;
 use Blackcube\Dcore\Entities\Content;
 use Blackcube\Dcore\Entities\Tag;
+use Blackcube\Handler\HandlerConfig;
 use Blackcube\Ssr\Attributes\RoutingHandler;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -44,29 +45,31 @@ use Yiisoft\Yii\View\Renderer\WebViewRenderer;
 class ContactHandler extends AbstractCmsHandler implements RequestHandlerInterface
 {
     public function __construct(
+        LoggerInterface $logger,
+        HandlerConfig $config,
         WebViewRenderer $viewRenderer,
         ResponseFactoryInterface $responseFactory,
         JsonResponseFactory $jsonResponseFactory,
         UrlGeneratorInterface $urlGenerator,
         Aliases $aliases,
         LocaleProvider $localeProvider,
-        LoggerInterface $logger,
         Content|Tag $element,
         private readonly ?MailerInterface $mailer = null,
         private readonly ?TranslatorInterface $translator = null,
         array $params = [],
     ) {
         parent::__construct(
-            $viewRenderer,
-            $responseFactory,
-            $jsonResponseFactory,
-            $urlGenerator,
-            $aliases,
-            $localeProvider,
-            $logger,
-            $element,
-            null,
-            $params,
+            logger: $logger,
+            config: $config,
+            viewRenderer: $viewRenderer,
+            responseFactory: $responseFactory,
+            jsonResponseFactory: $jsonResponseFactory,
+            urlGenerator: $urlGenerator,
+            aliases: $aliases,
+            localeProvider: $localeProvider,
+            element: $element,
+            exception: null,
+            params: $params,
         );
     }
 
@@ -95,35 +98,37 @@ class ContactHandler extends AbstractCmsHandler implements RequestHandlerInterfa
         ]);
     }
 
-    private function sendMail(ContactForm $contactForm): bool
+    protected function sendMail(ContactForm $contactForm): bool
     {
-        if ($this->mailer === null) {
-            return true;
+        $status = true;
+        if ($this->mailer !== null) {
+            $appEnvironment = AppEnvironment::create();
+
+            $textBody = 'Nouveau message depuis le formulaire de contact :' . "\n\n"
+                . 'Nom : ' . $contactForm->getName() . "\n"
+                . 'Email : ' . $contactForm->getEmail() . "\n";
+            $company = $contactForm->getCompany();
+            if ($company !== null && $company !== '') {
+                $textBody .= 'Société : ' . $company . "\n";
+            }
+            $textBody .= "\n" . 'Message :' . "\n" . $contactForm->getMessage();
+
+            $message = (new Message())
+                ->withFrom($appEnvironment->getMailjetFrom() ?? '')
+                ->withTo($appEnvironment->getMailjetTo() ?? '')
+                ->withReplyTo($contactForm->getEmail() ?? '')
+                ->withSubject('Contact depuis blackcube.io')
+                ->withTextBody($textBody);
+
+            try {
+                $this->mailer->send($message);
+            } catch (Throwable $e) {
+                $this->logger->error('[Contact] mail not sent: ' . $e->getMessage(), [
+                    'exception' => $e,
+                ]);
+                $status = false;
+            }
         }
-
-        $appEnvironment = AppEnvironment::create();
-
-        $textBody = 'Nouveau message depuis le formulaire de contact :'."\n\n"
-            .'Nom : '.$contactForm->getName()."\n"
-            .'Email : '.$contactForm->getEmail()."\n";
-        $company = $contactForm->getCompany();
-        if ($company !== null && $company !== '') {
-            $textBody .= 'Société : '.$company."\n";
-        }
-        $textBody .= "\n".'Message :'."\n".$contactForm->getMessage();
-
-        $message = (new Message())
-            ->withFrom($appEnvironment->getMailjetFrom() ?? '')
-            ->withTo($appEnvironment->getMailjetTo() ?? '')
-            ->withReplyTo($contactForm->getEmail() ?? '')
-            ->withSubject('Contact depuis blackcube.io')
-            ->withTextBody($textBody);
-
-        try {
-            $this->mailer->send($message);
-        } catch (Throwable) {
-            return false;
-        }
-        return true;
+        return $status;
     }
 }
