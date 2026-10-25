@@ -1,0 +1,25 @@
+{
+    "elementType": "content",
+    "path": "3",
+    "elasticSchemaId": null,
+    "data": [],
+    "id": 3,
+    "name": "Server Error",
+    "languageId": "fr",
+    "typeId": 4,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "server-error",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": null,
+        "sitemap": null
+    },
+    "blocs": [],
+    "tags": [],
+    "authors": []
+}

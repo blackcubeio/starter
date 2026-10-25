@@ -1,0 +1,25 @@
+{
+    "elementType": "content",
+    "path": "2",
+    "elasticSchemaId": null,
+    "data": [],
+    "id": 2,
+    "name": "Not Found",
+    "languageId": "fr",
+    "typeId": 3,
+    "active": true,
+    "dateStart": null,
+    "dateEnd": null,
+    "slug": {
+        "hostId": 1,
+        "path": "not-found",
+        "targetUrl": null,
+        "httpCode": null,
+        "active": true,
+        "xeo": null,
+        "sitemap": null
+    },
+    "blocs": [],
+    "tags": [],
+    "authors": []
+}
