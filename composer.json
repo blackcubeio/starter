@@ -28,6 +28,7 @@
         "blackcube/dboard": "^1.0",
         "blackcube/dcore": "^1.0",
         "blackcube/graphql": "^1.0",
+        "blackcube/handler": "^1.0",
         "blackcube/mcp": "^1.0",
         "blackcube/ssr": "^1.0",
         "blackcube/assets": "^1.0",
