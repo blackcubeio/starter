@@ -69,11 +69,14 @@ DB_PASSWORD=myapp
 
 and all needed conf vars 
 
-Run the migrations:
+Apply the upgrades the installed packages declare, then run the migrations:
 
 ```bash
+php yii.php upgrade
 php yii.php migrate:up
 ```
+
+The MCP add-on is activated from the Addons screen of dboard or by `php yii.php dboard:addonActivate mcp`: its migrations are played by the activation, not by `migrate:up`.
 
 ## Stack
 
