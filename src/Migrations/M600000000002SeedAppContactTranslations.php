@@ -22,7 +22,7 @@ use Throwable;
  * @license https://www.blackcube.io/license
  * @link https://www.blackcube.io
  */
-class M00000001000002SeedAppContactTranslations implements RevertibleMigrationInterface
+class M600000000002SeedAppContactTranslations implements RevertibleMigrationInterface
 {
     private const CATEGORY = 'app-contact';
 

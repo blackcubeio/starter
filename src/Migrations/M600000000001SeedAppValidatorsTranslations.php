@@ -22,7 +22,7 @@ use Throwable;
  * @license https://www.blackcube.io/license
  * @link https://www.blackcube.io
  */
-class M00000001000001SeedAppValidatorsTranslations implements RevertibleMigrationInterface
+class M600000000001SeedAppValidatorsTranslations implements RevertibleMigrationInterface
 {
     public function up(MigrationBuilder $b): void
     {

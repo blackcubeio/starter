@@ -9,7 +9,7 @@ declare(strict_types=1);
  */
 
 use Blackcube\Bleet\Command\BleetDemo;
-use Blackcube\Mcp\Dboard\McpAddon;
+use App\Upgrades\RenameMigrations;
 use App\AppEnvironment;
 use Psr\Log\LogLevel;
 
@@ -66,8 +66,13 @@ return [
         'sourceNamespaces' => [
             'Blackcube\\Dboard\\Migrations',
             'Blackcube\\Dcore\\Migrations',
-            'Blackcube\\Mcp\\Migrations',
             'App\\Migrations',
+        ],
+    ],
+    // The migrations of the application took the type digit 6: `upgrade` rewrites the history.
+    'blackcube/dcore' => [
+        'upgrades' => [
+            RenameMigrations::class,
         ],
     ],
     'yiisoft/translator' => [
@@ -86,21 +91,6 @@ return [
             'rsPrivateKey' => dirname(__DIR__) . ($appEnvironment->getOauth2PrivateKey() ?? '/keys/private.pem'),
         ],
         'adminTemplatesAlias' => '@src/AdminTemplates',
-        'addons' => [
-            'mcp' => [
-                'rbac' => [McpAddon::class, 'getRbac'],
-                'sidebar' => [McpAddon::class, 'getSidebar'],
-                'routes' => [McpAddon::class, 'getRoutesGroup'],
-                'population' => [
-                    McpAddon::class,
-                    'getPopulation',
-                ],
-                'scopes' => [
-                    McpAddon::class,
-                    'getScopes',
-                ],
-            ],
-        ],
     ],
 
     'blackcube/mcp' => [
